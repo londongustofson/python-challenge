@@ -1,0 +1,37 @@
+
+import pandas as pd
+
+csv_path= "03-Python_homework_PyBank_Resources_budget_data (2).csv"
+# budget_data_1.csv
+
+PyBank_df = pd.read_csv(csv_path)
+
+
+df.columns
+
+months=df["date"].count()
+months
+
+total_revenue = df["Revenue"].sum()
+total_revenue
+
+average_revenue = df["Revenue"].mean()
+print(average_revenue)
+
+max_revenue = df["Revenue"].max()
+max_revenue
+
+date = df.loc[df["Revenue"] == max_revenue, "Date"]
+max_date = date.iloc[0]
+max_date
+
+min_revenue = df["Revenue"].min()
+min_revenue
+
+min_date = df.loc[df["Revenue"] == min_revenue, "Date"]
+min_date_loc = date.iloc[0]
+min_date_loc
+
+print(f" Total Months: {months}\n Total Revenue: {total_revenue}\n Average Revenue Change:
+ {average_revenue}\n Greatest Increase in Revenue: {max_date} {max_revenue}\n Greatest Decrease 
+ in Revenue: {min_date_loc} {min_revenue}")
